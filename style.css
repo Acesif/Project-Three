@@ -1,0 +1,88 @@
+:root{
+    --Big-shoulders: 'Big Shoulders Display', sans-serif;
+    --Lexend-deca: 'Lexend Deca', sans-serif;
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 375px;
+    margin: 1.25rem;
+}
+.container .one{
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+    background-color: var(--Bright-orange);
+    padding: 1.5rem;
+
+}
+.container .two{
+    background-color: var(--Dark-cyan);
+    padding: 1.5rem;
+
+}
+.container .three{
+    background-color: var(--Very-dark-cyan);
+    padding: 1.5rem;
+    border-radius: 0rem 0rem 0.8rem 0.8rem;
+
+}
+.container h1{
+    font-family: var(--Big-shoulders);
+    font-weight: 700;
+    color: var(--Very-light-gray);
+}
+.container .card p{
+    color: var(--Transparent-white);
+    font-family: var(--Lexend-deca);
+    font-weight: 400;
+}
+.container button{
+    background-color: var(--Very-light-gray);
+    border-radius: 1.5rem;
+    padding: 0.7rem 1.2rem;
+    margin-top: 1rem;
+    font-size: var(--Lexend-deca);
+    font-weight: 400;
+}
+.container .one button{
+    color: var(--Bright-orange);
+}
+.container .two button{
+    color: var(--Dark-cyan);
+}
+.container .three button{
+    color: var(--Very-dark-cyan);
+}
+.container .one button:hover{
+    cursor: pointer;
+    background-color: var(--Bright-orange);
+    color: wheat;
+}
+.container .two button:hover{
+    cursor: pointer;
+    background-color: var(--Dark-cyan);
+    color: wheat;
+}
+.container .three button:hover{
+    cursor: pointer;
+    background-color: var(--Very-dark-cyan);
+    color: wheat;
+}
