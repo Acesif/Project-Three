@@ -10,7 +10,7 @@
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-*{
+*,*::before,*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,6 +26,10 @@ body{
 .container{
     max-width: 375px;
     margin: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .container .one{
     border-radius: 0.8rem 0.8rem 0rem 0rem;
@@ -48,6 +52,7 @@ body{
     font-family: var(--Big-shoulders);
     font-weight: 700;
     color: var(--Very-light-gray);
+    text-transform: uppercase;
 }
 .container .card p{
     color: var(--Transparent-white);
@@ -61,6 +66,23 @@ body{
     margin-top: 1rem;
     font-size: var(--Lexend-deca);
     font-weight: 400;
+    cursor: pointer;
+}
+.one h1::before{
+    content: url(./images/icon-sedans.svg);
+    display: block;
+    margin-bottom: .875rem;
+}
+.two h1::before{
+    content: url(./images/icon-suvs.svg);
+    display: block;
+    margin-bottom: .875rem;
+
+}
+.three h1::before{
+    content: url(./images/icon-luxury.svg);
+    display: block;
+    margin-bottom: .875rem;
 }
 .container .one button{
     color: var(--Bright-orange);
@@ -85,4 +107,25 @@ body{
     cursor: pointer;
     background-color: var(--Very-dark-cyan);
     color: wheat;
+}
+@media (min-width: 768px){
+    .container{
+        flex-direction: row;
+    }
+    .container .card p{
+        min-width: 12.5rem;
+    }
+    .container .card{
+        border-radius: 0rem;
+    }
+    .container .one{
+        border-radius: 0.8rem 0rem 0rem 0.8rem;
+    }
+    .container .three{
+        border-radius: 0rem 0.8rem 0.8rem 0rem;
+    }
+    .container .card > *{
+        margin: 2rem 0rem 2rem 0rem;
+    }
+    
 }
